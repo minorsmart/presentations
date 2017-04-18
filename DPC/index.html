@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>DPC</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+		<style>
+				img#noborder {border:none !important;}
+				section.nopad{padding: 0px; margin: 0px;}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+				<h1>Start DPC 2017</h1>
+					<h3>Planning & Control</h3>
+					<p>
+						Docent: Witek ten Hove <font color="tomato">|</font>
+						<a href="https://github.com/witusj" target="_blank"><img id="noborder" src="image/github.png" height="42" width="42" style="vertical-align:middle"></a> <font color="tomato">|</font> 
+						<a href="https://www.linkedin.com/in/witektenhove/" target="_blank"><img id="noborder" src="image/linkedin.png" height="42" width="42" style="vertical-align:middle"></a> <font color="tomato">|</font>
+					</p>
+				</section>
+				<section>
+				  <p>Waarom is een treinreis van <font color="tomato">Nijmegen</font> naar <font color="yellow">Amsterdam</font> duurder dan van <font color="tomato">Nijmegen</font> naar <font color="skyblue">Utrecht</font>?</p>
+				  <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d313638.3800769339!2d5.1176651537063!3d52.110672924562266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e3!4m5!1s0x47c70867c7d7a981%3A0xf126f641808ac377!2sNijmegen+Station%2C+Stationsplein+7%2C+6512+AB+Nijmegen!3m2!1d51.843025399999995!2d5.8531783!4m5!1s0x47c63fb5949a7755%3A0x6600fd4cb7c0af8d!2sAmsterdam!3m2!1d52.370215699999996!2d4.8951679!5e0!3m2!1sen!2snl!4v1492458846363" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+				</section>
+				<section>
+				  <h2>Business Intelligence</h2>
+				  <video class="stretch" src="movie/qlikview.mp4" controls></video><br>
+				  <a href="http://us-b.demo.qlik.com/QvAJAXZfc/opendoc.htm?document=qvdocs%2FPlant%20Operations.qvw&host=demo11&sheet=SH24" target="_blank">Qlikview demo</a>
+				</section>
+				<section>
+				  <h2>Kwaliteitsmanagement</h2>
+				  <img src="https://i2.wp.com/cdn.tidyforms.com/Download/html/blank-fishbone-diagram/bg1.png">
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+				chalkboard: {
+        theme: "whiteboard",
+        color: [ 'Red', 'rgba(255,255,255,0.5)' ]
+        },
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/chalkboard/chalkboard.js' }
+				]
+			});
+		</script>
+	</body>
+</html>
