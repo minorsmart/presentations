@@ -8,25 +8,25 @@ patient <- trajectory("patients' path") %>%
   ## add an intake activity
   log_("Hello...") %>%
   seize("nurse", 1) %>%
-  timeout(function() rnorm(1, 10, 5)) %>%
+  timeout(10) %>%
   release("nurse", 1) %>%
   ## add a consultation activity
   log_("Doctor will see you now...") %>%
   seize("doctor", 1) %>%
-  timeout(function() rnorm(1, 15, 10)) %>%
+  timeout(15) %>%
   release("doctor", 1) %>%
   ## add a billing activity
   seize("administration", 1) %>%
-  timeout(function() rnorm(1, 5)) %>%
+  timeout(5) %>%
   log_("Sign her please...") %>%
   release("administration", 1)
 
 # Add resources
 env %>%
-  add_resource("nurse", 1, queue_size=5) %>%
+  add_resource("nurse", 1, queue_size=3) %>%
   add_resource("doctor", 2, queue_size=0) %>%
   add_resource("administration", 1) %>%
-  add_generator("patient", patient, function() rpois(2, 10))
+  add_generator("patient", patient, function(x) 10)
 
 # Run simulation
 env %>% 
