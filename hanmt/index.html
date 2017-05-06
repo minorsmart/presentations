@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Smart Edu</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+		<style>
+				img#noborder {border:none !important;}
+				section.nopad {padding: 0px; margin: 0px; margin-left: 0px;}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+				<h1>Smart Education</h1>
+					<h3>Business Intelligence in Onderwijs</h3>
+					<p>
+						Docent: Witek ten Hove <font color="tomato"><br>|</font>
+						<a href="https://github.com/witusj" target="_blank"><img id="noborder" src="image/github.png" height="42" width="42" style="vertical-align:middle"></a> <font color="tomato">|</font> 
+						<a href="https://www.linkedin.com/in/witektenhove/" target="_blank"><img id="noborder" src="image/linked.png" height="42" width="42" style="vertical-align:middle"></a> <font color="tomato">|</font>
+					</p><br>
+					<i>minorsmart.github.io<font color="tomato">/</font>presentations<font color="tomato">/</font>BBM</i>
+				</section>
+				
+				<section>
+				  <h2>Beslissingen</h2>
+				  <video class="stretch" src="movie/google.mp4" controls></video><br>
+				  <p style="font-size:28px">Fragment uit <a href="https://youtu.be/nLjFTHTgEVU" target="_blank">Unconscious Bias @ Work | Google Ventures</a></p>
+				</section>
+				
+				<section>
+				  <h2>Start Survey</h2>
+				  
+				</section>
+				
+				<section class="nopad">
+				<h2>Learning Analytics</h2>
+				 <div style= "position:relative; top: 120px;">
+				  <iframe src="chart/Calendar.htm" frameborder="2" width="1400" height="800"></iframe>
+				 </div>
+				</section>
+				
+				<section class="nopad">
+				  <h2>Intermediate Survey</h2>
+				  <div style= "position:relative; top: 120px;">
+				   <iframe src="chart/sentiment.html" width="850" height="450" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+				   </div>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+				chalkboard: {
+        theme: "whiteboard",
+        color: [ 'Red', 'rgba(255,255,255,0.5)' ]
+        },
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/chalkboard/chalkboard.js' }
+				]
+			});
+		</script>
+	</body>
+</html>
