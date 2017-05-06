@@ -13,7 +13,9 @@ library(plotly)
 
 surveyDF <- read.csv("Startsurvey.csv")
 questions <- colnames(surveyDF)[4:dim(surveyDF)[2]]
-
+bijdrage <- as.character(surveyDF[,7])
+bijdrage <- unlist(strsplit(bijdrage, "\\n"))
+bijdrageDF <- data.frame(Bijdrage = bijdrage)
 
 # Define UI for application that draws a histogram
 ui <- fluidPage(
@@ -46,9 +48,16 @@ server <- function(input, output, session) {
   })
   
    output$distPlot <- renderPlot({
+     
+     if(input$vragen != "Wat.heb.je.al.gedaan.ter.voorbereiding.op.deze.minor.") {
      ggplot(surveyDF, aes(x = surveyDF[,input$vragen], fill=surveyDF[,input$vragen])) +
        geom_bar() +
        theme(legend.title=element_blank(), axis.title.x=element_blank(), axis.text.x=element_blank())
+     } else {
+       ggplot(bijdrageDF, aes(x = Bijdrage, fill=Bijdrage)) +
+         geom_bar() +
+         theme(legend.title=element_blank(), axis.title.x=element_blank(), axis.text.x=element_blank())
+     }
    })
 }
 
