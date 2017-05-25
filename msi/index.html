@@ -85,69 +85,6 @@ section.nopad {
   padding: 0px; margin: 0px;
 }
 
-div#enablers {
-    width: 110px;
-    height: 80px;
-    position: relative;
-    background-color: white;
-    opacity: 0.9;
-    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
-    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
-    animation-fill-mode: forwards;
-    animation-name: enablers;
-    animation-duration: 4s;
-    animation-timing-function: ease;
-}
-
-/* Safari 4.0 - 8.0 */
-@-webkit-keyframes enablers {
-    0%   {left:300px; top:0px;}
-    25%   {left:550px; top:0px;}
-    50%  {left:800px; top:0px;}
-    75%  {left:800px; top:200px;}
-    100%  {left:800px; top:400px;}
-}
-
-/* Standard syntax */
-@keyframes enablers {
-    0%   {left:300px; top:0px;}
-    25%   {left:550px; top:0px;}
-    50%  {left:800px; top:0px;}
-    75%  {left:800px; top:200px;}
-    100%  {left:800px; top:400px;}
-}
-
-div#outcomes {
-    width: 110px;
-    height: 80px;
-    position: relative;
-    background-color: white;
-    opacity: 0.9;
-    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
-    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
-    animation-fill-mode: forwards;
-    animation-name: outcomes;
-    animation-duration: 4s;
-}
-
-/* Safari 4.0 - 8.0 */
-@-webkit-keyframes outcomes {
-    0%   {left:300px; top:0px;}
-    25%  {left:350px; top:0px;}
-    50%  {left:420px; top:0px;}
-    75%  {left:420px; top:100px;}
-    100%  {left:420px; top:200px;}
-}
-
-/* Standard syntax */
-@keyframes outcomes {
-    0%   {left:300px; top:0px;}
-    25%  {left:350px; top:0px;}
-    50%  {left:420px; top:0px;}
-    75%  {left:420px; top:100px;}
-    100%  {left:420px; top:200px;}
-}
-
 </style>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -195,7 +132,7 @@ div#outcomes {
 				
 				<section>
 				  <h2>Why?</h2>
-          <div style="text-align: left; float: left;">
+          <div style="text-align: left; float: left; padding:1px;border:1px solid white;">
             <pre><code>
 library(threejs)
 data(ego)
@@ -204,7 +141,7 @@ graphjs(ego, bg="black")
           </div>
 
           <div style="text-align: right; float: right;">
-            <iframe src="chart/graph.html" width="1000" height="600" margin="50"></iframe>
+            <iframe src="chart/graph.html" style="padding:1px;border:1px solid white;" width="1000" height="600"></iframe>
           </div>
          </section>
 				
