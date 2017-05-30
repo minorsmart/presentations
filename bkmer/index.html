@@ -1,0 +1,284 @@
+<!doctype html>
+<html>
+	<head>
+<style type="text/css">
+.knitr .inline {
+  background-color: #f7f7f7;
+  border:solid 1px #B0B0B0;
+}
+.error {
+	font-weight: bold;
+	color: #FF0000;
+}
+.warning {
+	font-weight: bold;
+}
+.message {
+	font-style: italic;
+}
+.source, .output, .warning, .error, .message {
+	padding: 0 1em;
+  border:solid 1px #F7F7F7;
+}
+.source {
+  background-color: #f5f5f5;
+}
+.rimage .left {
+  text-align: left;
+}
+.rimage .right {
+  text-align: right;
+}
+.rimage .center {
+  text-align: center;
+}
+.hl.num {
+  color: #AF0F91;
+}
+.hl.str {
+  color: #317ECC;
+}
+.hl.com {
+  color: #AD95AF;
+  font-style: italic;
+}
+.hl.opt {
+  color: #000000;
+}
+.hl.std {
+  color: #585858;
+}
+.hl.kwa {
+  color: #295F94;
+  font-weight: bold;
+}
+.hl.kwb {
+  color: #B05A65;
+}
+.hl.kwc {
+  color: #55aa55;
+}
+.hl.kwd {
+  color: #BC5A65;
+  font-weight: bold;
+}
+.image {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5%;
+}
+.image.recolour {
+  transition: filter 1s, transform 1s;
+}
+.image:hover.recolour {
+  filter: hue-rotate(180deg)
+}
+.image:hover.recolour {
+  transform: rotate(20deg);
+}
+img#noborder
+{
+  border:none !important;
+}
+section.nopad {
+  padding: 0px; margin: 0px;
+}
+
+div#enablers {
+    width: 110px;
+    height: 80px;
+    position: relative;
+    background-color: white;
+    opacity: 0.9;
+    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-fill-mode: forwards;
+    animation-name: enablers;
+    animation-duration: 4s;
+    animation-timing-function: ease;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes enablers {
+    0%   {left:300px; top:0px;}
+    25%   {left:550px; top:0px;}
+    50%  {left:800px; top:0px;}
+    75%  {left:800px; top:200px;}
+    100%  {left:800px; top:400px;}
+}
+
+/* Standard syntax */
+@keyframes enablers {
+    0%   {left:300px; top:0px;}
+    25%   {left:550px; top:0px;}
+    50%  {left:800px; top:0px;}
+    75%  {left:800px; top:200px;}
+    100%  {left:800px; top:400px;}
+}
+
+div#outcomes {
+    width: 110px;
+    height: 80px;
+    position: relative;
+    background-color: white;
+    opacity: 0.9;
+    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-fill-mode: forwards;
+    animation-name: outcomes;
+    animation-duration: 4s;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes outcomes {
+    0%   {left:300px; top:0px;}
+    25%  {left:350px; top:0px;}
+    50%  {left:420px; top:0px;}
+    75%  {left:420px; top:100px;}
+    100%  {left:420px; top:200px;}
+}
+
+/* Standard syntax */
+@keyframes outcomes {
+    0%   {left:300px; top:0px;}
+    25%  {left:350px; top:0px;}
+    50%  {left:420px; top:0px;}
+    75%  {left:420px; top:100px;}
+    100%  {left:420px; top:200px;}
+}
+
+</style>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+		<title>Witek ten Hove</title>
+
+	  <link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/black.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+			
+				<section>
+				<img id="noborder" src="image/logohan.jpg" width="1200" height="220" alt="HAN">
+			    <h1>Opleiding Bedrijfskunde</h1>
+			    <h3>Bedrijfseconomie</h3>
+				</section>
+				
+				<section>
+			    
+						<h1>Witek ten Hove</h1>
+						<p>
+						<font color="tomato">|</font>
+						<a href="https://github.com/witusj" target="_blank"><img class = "image recolour" id="noborder" src="image/github.png" height="42" width="42" style="vertical-align:middle"></a> <font color="tomato">|</font> 
+						<a href="https://www.linkedin.com/in/witektenhove/" target="_blank"><img class = "image recolour" id="noborder" src="image/linked.png" height="42" width="42" style="vertical-align:middle"></a> <font color="tomato">|</font>
+						<a href="https://witusj.github.io/MinorSI/" target="_blank"><img class = "image recolour" id="noborder" src="image/msi.png" height="42" width="90" style="vertical-align:middle"></a> <font color="tomato">|</font>
+					</p><br>
+					<i>minorsmart.github.io<font color="tomato">/</font>presentations<font color="tomato">/</font>bkmer</i>
+				</section>
+				
+				<section>
+				   <h2>Financial Accounting</h2>
+				     <ul>
+				       <li style='color: tomato;'><span style='color:white;'>C-cluster</span></li>
+				       <li style='color: tomato;'><span style='color:white;'>Performance t.o.v. concurrentie</span></li>
+				     </ul>
+				</section>
+				
+				<section>
+				   <h2>Management Accounting</h2>
+				     <ul>
+				       <li style='color: tomato;'><span style='color:white;'>D-Cluster</span></li>
+				       <li style='color: tomato;'><span style='color:white;'>Performance t.o.v. doelstellingen</span></li>
+				     </ul>
+				</section>
+				
+				<section>
+				  
+				<section>
+				   <h2>Corporate Finance</h2>
+				     <ul>
+				       <li style='color: tomato;'><span style='color:white;'>C-, D-, en E-Cluster</span></li>
+				       <li style='color: tomato;'><span style='color:white;'>Waardebepaling</span></li>
+				     </ul>
+				</section>
+				
+				<section>
+				   <h2>Waardebepaling</h2>
+				     <ul>
+				       <li style='color: tomato;'><span style='color:white;'>Contante en toekomstige waarde</span></li>
+				       <li style='color: tomato;'><span style='color:white;'>Rendement versus risico</span></li>
+				       <li style='color: tomato;'><span style='color:white;'>Relevante cash flows</span></li>
+				       <li style='color: tomato;'><span style='color:white;'>Vermogenskosten</span></li>
+				       <li style='color: tomato;'><span style='color:white;'>Reële opties</span></li>
+				       <li style='color: tomato;'><span style='color:white;'>Monte Carlo simulaties</span></li>
+				       <li style='color: tomato;'><span style='color:white;'>Behavioural Finance</span></li>
+				     </ul>
+				</section>
+				
+				</section>
+				
+				<section>
+				
+				<section>
+				   <h2>Vaardigheden</h2>
+				     <ul>
+				       <li style='color: tomato;'><span style='color:white;'>Modelleren met spreadsheets</span></li>
+				       <li style='color: tomato;'><span style='color:white;'>Data visualisatie</span></li>
+				       <li style='color: tomato;'><span style='color:white;'>Statistiek</span></li>
+				       <li style='color: tomato;'><span style='color:white;'>Wiskunde</span></li>
+				     </ul>
+				</section>
+				
+				<section>
+				   <h2>Vaardigheden: Statistiek</h2>
+				     <video src="movie/histogram.mp4" width="60%" height="60%" controls></video><br>
+				</section>
+				
+				<section>
+				   <h2>Vaardigheden: Wiskunde</h2>
+				     <video src="movie/hefboom.mp4" width="60%" height="60%" controls></video><br>
+				</section>
+				
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+				
+				width: "100%",
+        height: "100%",
+        margin: 0,
+        minScale: 1,
+        maxScale: 1,
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				],
+			});
+		</script>
+	</body>
+</html>
