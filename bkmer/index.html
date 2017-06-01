@@ -173,13 +173,13 @@ div#outcomes {
 		<div class="reveal">
 			<div class="slides">
 			
-				<section data-autoslide="5000" data-fullscreen>
+				<section data-fullscreen data-autoslide="5000">
 				<img id="noborder" src="image/logohan.jpg" width="1200" height="220" alt="HAN">
 			    <h1>Opleiding Bedrijfskunde</h1>
 			    <h3>Bedrijfseconomie</h3>
 				</section>
 				
-				<section data-autoslide="5000">
+				<section data-fullscreen data-autoslide="5000">
 			    
 						<h1>Witek ten Hove</h1>
 						<p>
@@ -241,7 +241,7 @@ div#outcomes {
 				     </ul>
 				</section>
 				
-				<section data-autoslide="5000">
+				<section data-autoslide="10000">
 				   <h2>Waardebepaling</h2>
 				     <ul>
 				       <li style='color: tomato;'><span style='color:white;'>Contante en toekomstige waarde</span></li>
@@ -305,7 +305,7 @@ div#outcomes {
 				
 				<section data-autoslide="5000">
 				   <h2>Vaardigheden: Statistiek</h2>
-				     <video preload="auto" data-autoplay data-audio-controls src="movie/histogram.mp4" width="70%" height="70%" controls></video><br>
+				     <video preload="auto" data-autoplay data-audio-controls src="movie/histogram.mp4" width="60%" height="60%" controls></video><br>
 				</section>
 				
 				<section data-autoslide="5000">
@@ -324,6 +324,7 @@ div#outcomes {
 		<script>
 			// More info https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
+			  autoSlide: 5000,
 				history: true,
 				loop: true,
 				
@@ -334,8 +335,6 @@ div#outcomes {
         maxScale: 1,
 				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
-				  { src: 'plugin/audio-slideshow/slideshow-recorder.js', condition: function( ) { return !!document.body.classList; } },	
-		      { src: 'plugin/audio-slideshow/audio-slideshow.js', condition: function( ) { return !!document.body.classList; } },
 		      { src: 'plugin/fullscreen/fullscreen.js' },
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
