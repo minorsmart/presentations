@@ -1,0 +1,57 @@
+---
+title: "Digital Business Innovation"
+author: "Witek ten Hove"
+output:
+  revealjs::revealjs_presentation:
+    self_contained: false
+    theme: black
+    center: false
+    reveal_options:
+      slideNumber: true
+---
+
+## Digitaal business model
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+# library
+library(igraph)
+ 
+# Create data
+data=matrix(c(0, 1, 0,
+              0, 0, 1,
+              1, 0, 0),
+            dimnames = list(c("product", "data", "users"),
+                            c("product", "data", "users")
+                            ),
+            nrow = 3)
+network <- graph_from_adjacency_matrix(data, mode = 'directed', diag = F)
+ 
+# When ploting, we can use different layouts:
+plot(network, layout=layout.circle, vertex.size=80, vertex.color = c("#F1948A", "#F7DC6F", "#85C1E9"), vertex.label.color = "black", vertex.label.cex = 1.5, vertex.label.family = "Arial")
+
+```
+
+## Wat is een internetbedrijf?
+
+* Supermarkt + website $\ne$ internetbedrijf
+
+* Features internetbedrijf:
+
+    - A/B testing
+    - Korte ontwikkelcycli
+    - Beslissingbevoegdheden bij engineers en productmanagers
+
+## Wat is een AI-bedrijf?
+
+* Internetbedrijf + neuraal netwerk $\ne$ AI-bedrijf
+
+* Features AI-bedrijfs:
+
+    + Strategische data-acquisitie
+    + Unified data warehouses
+    + Intensieve automatisering
+    + Nieuwe taken / rollen
+
+## Thanks
+
++ [Andrew Ng](https://youtu.be/NKpuX_yzdYs)
