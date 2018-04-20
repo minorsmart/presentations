@@ -1,344 +1,407 @@
 <!doctype html>
 <html>
-	<head>
-<style type="text/css">
-.knitr .inline {
-  background-color: #f7f7f7;
-  border:solid 1px #B0B0B0;
-}
-.error {
-	font-weight: bold;
-	color: #FF0000;
-}
-.warning {
-	font-weight: bold;
-}
-.message {
-	font-style: italic;
-}
-.source, .output, .warning, .error, .message {
-	padding: 0 1em;
-  border:solid 1px #F7F7F7;
-}
-.source {
-  background-color: #f5f5f5;
-}
-.rimage .left {
-  text-align: left;
-}
-.rimage .right {
-  text-align: right;
-}
-.rimage .center {
-  text-align: center;
-}
-.hl.num {
-  color: #AF0F91;
-}
-.hl.str {
-  color: #317ECC;
-}
-.hl.com {
-  color: #AD95AF;
-  font-style: italic;
-}
-.hl.opt {
-  color: #000000;
-}
-.hl.std {
-  color: #585858;
-}
-.hl.kwa {
-  color: #295F94;
-  font-weight: bold;
-}
-.hl.kwb {
-  color: #B05A65;
-}
-.hl.kwc {
-  color: #55aa55;
-}
-.hl.kwd {
-  color: #BC5A65;
-  font-weight: bold;
-}
-.image {
-  display: inline-block;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 5%;
-}
-.image.recolour {
-  transition: filter 1s, transform 1s;
-}
-.image:hover.recolour {
-  filter: hue-rotate(180deg)
-}
-.image:hover.recolour {
-  transform: rotate(20deg);
-}
-img#noborder
-{
-  border:none !important;
-}
-section.nopad {
-  padding: 0px; margin: 0px;
-}
 
-</style>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link href="font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
-		<title>Witek ten Hove</title>
+<head>
+	<style type="text/css">
+		.knitr .inline {
+			background-color: #f7f7f7;
+			border: solid 1px #B0B0B0;
+		}
 
-	  <link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		.error {
+			font-weight: bold;
+			color: #FF0000;
+		}
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/black.css">
+		.warning {
+			font-weight: bold;
+		}
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-			
-				<section>
+		.message {
+			font-style: italic;
+		}
+
+		.source,
+		.output,
+		.warning,
+		.error,
+		.message {
+			padding: 0 1em;
+			border: solid 1px #F7F7F7;
+		}
+
+		.source {
+			background-color: #f5f5f5;
+		}
+
+		.rimage .left {
+			text-align: left;
+		}
+
+		.rimage .right {
+			text-align: right;
+		}
+
+		.rimage .center {
+			text-align: center;
+		}
+
+		.hl.num {
+			color: #AF0F91;
+		}
+
+		.hl.str {
+			color: #317ECC;
+		}
+
+		.hl.com {
+			color: #AD95AF;
+			font-style: italic;
+		}
+
+		.hl.opt {
+			color: #000000;
+		}
+
+		.hl.std {
+			color: #585858;
+		}
+
+		.hl.kwa {
+			color: #295F94;
+			font-weight: bold;
+		}
+
+		.hl.kwb {
+			color: #B05A65;
+		}
+
+		.hl.kwc {
+			color: #55aa55;
+		}
+
+		.hl.kwd {
+			color: #BC5A65;
+			font-weight: bold;
+		}
+
+		.image {
+			display: inline-block;
+			background-repeat: no-repeat;
+			background-size: cover;
+			border-radius: 5%;
+		}
+
+		.image.recolour {
+			transition: filter 1s, transform 1s;
+		}
+
+		.image:hover.recolour {
+			filter: hue-rotate(180deg)
+		}
+
+		.image:hover.recolour {
+			transform: rotate(20deg);
+		}
+
+		img#noborder {
+			border: none !important;
+		}
+
+		section.nopad {
+			padding: 0px;
+			margin: 0px;
+		}
+	</style>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link href="font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+	<title>Witek ten Hove</title>
+
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/black.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/black.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+
+			<section>
 				<img id="noborder" src="image/logohan.jpg" width="1200" height="220" alt="HAN">
-			    <h1>Smart Industry</h1>
-			    <h3>Next Level Lean</h3>
-				</section>
-				
+				<h1>Smart Industry</h1>
+				<h3>Next Level Lean</h3>
+			</section>
+
+			<section>
+
 				<section>
-				
-				<section>
-			    
-						<h1>Witek ten Hove</h1>
-						<p>
+
+					<h1>Witek ten Hove</h1>
+					<p>
 						<font color="tomato">|</font>
-						<a href="https://github.com/witusj" target="_blank"><img class = "image recolour" id="noborder" src="image/github.png" height="42" width="42" style="vertical-align:middle"></a> <font color="tomato">|</font> 
-						<a href="https://www.linkedin.com/in/witektenhove/" target="_blank"><img class = "image recolour" id="noborder" src="image/linked.png" height="42" width="42" style="vertical-align:middle"></a> <font color="tomato">|</font>
-						<a href="https://witusj.github.io/MinorSI/" target="_blank"><img class = "image recolour" id="noborder" src="image/msi.png" height="42" width="90" style="vertical-align:middle"></a> <font color="tomato">|</font>
-						<a href="https://witusj.github.io/personal/" target="_blank"><img class = "image recolour" id="noborder" src="image/meme.png" height="42" width="42" style="vertical-align:middle"></a> <font color="tomato">|</font>
+						<a href="https://github.com/witusj" target="_blank"><img class = "image recolour" id="noborder" src="image/github.png" height="42" width="42" style="vertical-align:middle"></a>
+						<font color="tomato">|</font>
+						<a href="https://www.linkedin.com/in/witektenhove/" target="_blank"><img class = "image recolour" id="noborder" src="image/linked.png" height="42" width="42" style="vertical-align:middle"></a>
+						<font color="tomato">|</font>
+						<a href="https://witusj.github.io/MinorSI/" target="_blank"><img class = "image recolour" id="noborder" src="image/msi.png" height="42" width="90" style="vertical-align:middle"></a>
+						<font color="tomato">|</font>
+						<a href="https://witusj.github.io/personal/" target="_blank"><img class = "image recolour" id="noborder" src="image/meme.png" height="42" width="42" style="vertical-align:middle"></a>
+						<font color="tomato">|</font>
 					</p><br>
 					<i>minorsmart.github.io<font color="tomato">/</font>presentations<font color="tomato">/</font>msi</i>
 				</section>
-				
+
 				<section>
-				  <h2>Why?</h2>
-          <div style="text-align: left; float: left; padding:1px;border:1px solid white;">
-            <pre>
+					<iframe src="https://witusj.github.io/firebase/notes/notes.html" width=1200 height=800></iframe>
+				</section>
+
+				<section>
+					<h2>Why?</h2>
+					<div style="text-align: left; float: left; padding:1px;border:1px solid white;">
+						<pre>
               <code>
  library(threejs)
  data(ego)
- graphjs(ego, bg="black")   
+ graphjs(ego, bg="black")
                </code>
             </pre>
-          </div>
+					</div>
 
-          <div style="text-align: right; float: right;">
-            <embed src="chart/graph.html" width="1000" height="600">
-          </div>
-         </section>
-				
+					<div style="text-align: right; float: right;">
+						<embed src="chart/graph.html" width="1000" height="600">
+					</div>
 				</section>
-				
+
+			</section>
+
+			<section>
+
 				<section>
-				
-				  <section>
-				   <h2>Disruptie</h2>
-				    <p>Stel iemand laat in de Amsterdam Arena op de middenstip een druppel water vallen, een seconde                   later twee, een seconde later vier, etc. etc.
-				    </p>
-				    <p>
-               Hoe lang duurt het voordat de Arena tot aan de nok is gevuld met water?
-            </p>
-				  </section>
-				  
-				  <section>
-				   <h2>Disruptie</h2>
-				    <img src="image/arena1.gif">
-				  </section>
-				  
-				  <section>
-				   <h2>Disruptie</h2>
-				    <iframe width="552" height="404" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1CBiM0y-s4UOejUNWLb9LJGY_a-41pFlUYOGR11DpVTU/pubchart?oid=356587394&amp;format=interactive"></iframe>
-				  </section>
-				  
-				  <section>
-				  <h2>Google Disrupted</h2>
-				  <video src="movie/brin.mp4" width="60%" height="60%" controls></video><br>
-				  <p style="font-size:28px">Fragment uit <a href="https://youtu.be/30rx3dBPbIs" target="_blank">Google CEO Sergey Brin, "I didn't see Artificial Intelligence coming."</a></p>
+					<h2>Disruptie</h2>
+					<p>Stel iemand laat in de Amsterdam Arena op de middenstip een druppel water vallen, een seconde later twee, een seconde later vier, etc. etc.
+					</p>
+					<p>
+						Hoe lang duurt het voordat de Arena tot aan de nok is gevuld met water?
+					</p>
 				</section>
-				
+
+				<section>
+					<h2>Disruptie</h2>
+					<img src="image/arena1.gif">
+				</section>
+
+				<section>
+					<h2>Disruptie</h2>
+					<iframe width="552" height="404" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1CBiM0y-s4UOejUNWLb9LJGY_a-41pFlUYOGR11DpVTU/pubchart?oid=356587394&amp;format=interactive"></iframe>
+				</section>
+
+				<section>
+					<h2>Google Disrupted</h2>
+					<video src="movie/brin.mp4" width="60%" height="60%" controls></video><br>
+					<p style="font-size:28px">Fragment uit <a href="https://youtu.be/30rx3dBPbIs" target="_blank">Google CEO Sergey Brin, "I didn't see Artificial Intelligence coming."</a></p>
+				</section>
+
 				<section class="nopad">
-				  <h2>Deep Learning</h2>
-				  <img src="image/bkmer.jpg" width="600" height="400">
-				  <img src="image/predictions.png" width="600" height="400">
+					<h2>Deep Learning</h2>
+					<img src="image/bkmer.jpg" width="600" height="400">
+					<img src="image/predictions.png" width="600" height="400">
 				</section>
-				
+
 				<section>
-				  <h2>Deep Learning</h2>
-				  <video src="movie/bond.mp4" width="70%" height="70%" controls data-autoplay></video><br>
-				  <p style="font-size:28px">Fragment uit <a href="https://youtu.be/VOC3huqHrss" target="_blank">YOLO v2</a></p>
+					<h2>Deep Learning</h2>
+					<video src="movie/bond.mp4" width="70%" height="70%" controls data-autoplay></video><br>
+					<p style="font-size:28px">Fragment uit <a href="https://youtu.be/VOC3huqHrss" target="_blank">YOLO v2</a></p>
 				</section>
-				  
-				</section>
-				
-				<section>
+
+			</section>
+
+			<section>
 				<section class="nopad">
-				<h2>Smart Industry</h2>
-				<img src="image/wordcloud.png" width="1000" height="600">
-				
+					<h2>Smart Industry</h2>
+					<img src="image/wordcloud.png" width="1000" height="600">
+
 				</section>
 				<section class="nopad">
-				<h2>Smart Industry</h2>
-				<img src="image/smartind.jpg" width="600" height="600">
-				<p style="font-size:28px">Bron: <a href="https://www.smartindustry.nl/" target="_blank">smartindustry.nl</a></p>
+					<h2>Smart Industry</h2>
+					<img src="image/smartind.jpg" width="600" height="600">
+					<p style="font-size:28px">Bron: <a href="https://www.smartindustry.nl/" target="_blank">smartindustry.nl</a></p>
 				</section>
-				
+
 				<section>
-				  <h2>Sinek's Golden Circle</h2>
-				  <video src="movie/sinek.mp4" width="60%" height="60%" controls></video><br>
-				  <p style="font-size:28px">Fragment uit <a href="https://youtu.be/qp0HIF3SfI4" target="_blank">How great leaders inspire action | Simon Sinek</a></p>
+					<h2>Sinek's Golden Circle</h2>
+					<video src="movie/sinek.mp4" width="60%" height="60%" controls></video><br>
+					<p style="font-size:28px">Fragment uit <a href="https://youtu.be/qp0HIF3SfI4" target="_blank">How great leaders inspire action | Simon Sinek</a></p>
 				</section>
-				
+
 				<section class="nopad">
-				<h2>Smart Industry</h2>
-				<img src="image/why.png" width="600" height="600">
-				<p style="font-size:28px">Bron: <a href="https://www.smartindustry.nl/" target="_blank">smartindustry.nl</a></p>
+					<h2>Smart Industry</h2>
+					<img src="image/why.png" width="600" height="600">
+					<p style="font-size:28px">Bron: <a href="https://www.smartindustry.nl/" target="_blank">smartindustry.nl</a></p>
 				</section>
-				
+
 				<section>
-				  <h2>Return on Information</h2>
-				  <video src="movie/ibm.mp4" width="60%" height="60%" controls></video><br>
-				  <p style="font-size:28px">Fragment uit <a href="https://youtu.be/q7qElhGv7uY" target="_blank">The Future of Cognitive Computing</a></p>
+					<h2>Return on Information</h2>
+					<video src="movie/ibm.mp4" width="60%" height="60%" controls></video><br>
+					<p style="font-size:28px">Fragment uit <a href="https://youtu.be/q7qElhGv7uY" target="_blank">The Future of Cognitive Computing</a></p>
 				</section>
-				
+
 				<section class="nopad">
-				<h2>Smart Industry</h2>
-				<img src="image/smartenablers.png" width="500" height="500">
-				<p style="font-size:28px">Bron: <a href="https://www.smartindustry.nl/" target="_blank">smartindustry.nl</a></p>
+					<h2>Smart Industry</h2>
+					<img src="image/smartenablers.png" width="500" height="500">
+					<p style="font-size:28px">Bron: <a href="https://www.smartindustry.nl/" target="_blank">smartindustry.nl</a></p>
 				</section>
-				
+
 				<section>
-				  <h2>Productietechnologie</h2>
-				  <video src="movie/metalprint.mp4" width="60%" height="60%" controls></video><br>
-				  <p style="font-size:28px">Fragment uit <a href="https://youtu.be/SEaht2tQ8P8" target="_blank">Producing the world's first 3D-printed bridge</a></p>
+					<h2>Productietechnologie</h2>
+					<video src="movie/metalprint.mp4" width="60%" height="60%" controls></video><br>
+					<p style="font-size:28px">Fragment uit <a href="https://youtu.be/SEaht2tQ8P8" target="_blank">Producing the world's first 3D-printed bridge</a></p>
 				</section>
-				
+
 				<section>
-				  <h2>Digitalisering</h2>
-				  <video src="movie/siemens.mp4" width="60%" height="60%" controls></video><br>
-				  <p style="font-size:28px">Fragment uit <a href="https://youtu.be/dE3mH3b25wE" target="_blank">Demo Process Simulate Human</a></p>
+					<h2>Digitalisering</h2>
+					<video src="movie/siemens.mp4" width="60%" height="60%" controls></video><br>
+					<p style="font-size:28px">Fragment uit <a href="https://youtu.be/dE3mH3b25wE" target="_blank">Demo Process Simulate Human</a></p>
 				</section>
-				
+
 				<section>
-				<h2>Netwerken</h2>
-				<img src="image/facebook.png" width="1000" height="500" style= "position:relative; top: 40px;">
-				<p style="font-size:28px"><a href="http://searchengineland.com/figz/wp-content/seloads/2013/05/Facebook-Connections-Graph-Search-1920.png" target="_blank">Bron</a></p>
+					<h2>Netwerken</h2>
+					<img src="image/facebook.png" width="1000" height="500" style="position:relative; top: 40px;">
+					<p style="font-size:28px"><a href="http://searchengineland.com/figz/wp-content/seloads/2013/05/Facebook-Connections-Graph-Search-1920.png" target="_blank">Bron</a></p>
 				</section>
-				
+
 				<section>
-				  <h2>Netwerken</h2>
-				  <video src="movie/hrnetwork.mp4" width="60%" height="60%" controls></video><br>
-				  <p style="font-size:28px">Fragment uit <a href="https://youtu.be/nLjFTHTgEVU" target="_blank">Unconscious Bias @ Work | Google Ventures</a></p>
+					<h2>Netwerken</h2>
+					<video src="movie/hrnetwork.mp4" width="60%" height="60%" controls></video><br>
+					<p style="font-size:28px">Fragment uit <a href="https://youtu.be/nLjFTHTgEVU" target="_blank">Unconscious Bias @ Work | Google Ventures</a></p>
 				</section>
-				
+
 				<section>
-				  <h2>Netwerken</h2>
-				  <video src="movie/trash.mp4" width="60%" height="60%" controls></video><br>
-				  <p style="font-size:28px">Fragment uit <a href="https://youtu.be/fvTZc5hWBNY" target="_blank">Trash | Track</a></p>
+					<h2>Netwerken</h2>
+					<video src="movie/trash.mp4" width="60%" height="60%" controls></video><br>
+					<p style="font-size:28px">Fragment uit <a href="https://youtu.be/fvTZc5hWBNY" target="_blank">Trash | Track</a></p>
 				</section>
-				
+
 				<section class="nopad">
-				<h2>Smart Industry</h2>
-				<img src="image/smartoutcomes.jpg" width="600" height="600">
-				<p style="font-size:28px">Bron: <a href="https://www.smartindustry.nl/" target="_blank">smartindustry.nl</a></p>
+					<h2>Smart Industry</h2>
+					<img src="image/smartoutcomes.jpg" width="600" height="600">
+					<p style="font-size:28px">Bron: <a href="https://www.smartindustry.nl/" target="_blank">smartindustry.nl</a></p>
 				</section>
-				
+
 				<section>
-				  <h2>Why >> Enablers >> Outcomes</h2>
-				  <video src="movie/tailorsteel.mp4" width="60%" height="60%" controls></video><br>
-				  <p style="font-size:28px">Bron: <a href="https://youtu.be/M5gys0RcH-s" target="_blank">Video 247 Tailorsteel - NL</a></p>
+					<h2>Why >> Enablers >> Outcomes</h2>
+					<video src="movie/tailorsteel.mp4" width="60%" height="60%" controls></video><br>
+					<p style="font-size:28px">Bron: <a href="https://youtu.be/M5gys0RcH-s" target="_blank">Video 247 Tailorsteel - NL</a></p>
 				</section>
-				
-				</section>
-				
+
+			</section>
+
+			<section>
 				<section>
-				<section>
-				<h2>Opdracht</h2>
-				<ol>
-				  <li style='color: tomato;'><span style='color:white;'>Kies een casus ~ <font color="skyblue">why</font></span></li>
-				  <li style='color: tomato;'><span style='color:white;'>Kies een enabler ~ <font color="skyblue">how</font></span></li>
-				  <li style='color: tomato;'><span style='color:white;'>Kies een outcome ~ <font color="skyblue">what</font></span></li>
-				  <li style='color: tomato;'><span style='color:white;'>Beschrijf de relatie casus <font color="tomato">>></font> enabler <font color="tomato">>></font> outcome</span></li>
-				  <li style='color: tomato;'><span style='color:white;'>Beschrijf de rol die jij zou willen spelen in deze casus</span></li>
-				</ol>
+					<h2>Opdracht</h2>
+					<ol>
+						<li style='color: tomato;'><span style='color:white;'>Kies een casus ~ <font color="skyblue">why</font></span></li>
+						<li style='color: tomato;'><span style='color:white;'>Kies een enabler ~ <font color="skyblue">how</font></span></li>
+						<li style='color: tomato;'><span style='color:white;'>Kies een outcome ~ <font color="skyblue">what</font></span></li>
+						<li style='color: tomato;'><span style='color:white;'>Beschrijf de relatie casus <font color="tomato">>></font> enabler <font color="tomato">>></font> outcome</span></li>
+						<li style='color: tomato;'><span style='color:white;'>Beschrijf de rol die jij zou willen spelen in deze casus</span></li>
+					</ol>
 				</section>
-				
+
 				<section>
-				<h2>Inspiratie</h2>
-				<ul>
-				  <li style='color: tomato;'><a href="https://techcrunch.com/2017/05/12/yaypay-introduces-cash-flow-forecasts-for-accounts-receivable/" target="_blank">Debiteurenadministratie 4.0</a></li>
-				  <li style='color: tomato;'><a href="https://witusj.github.io/MinorSI/2-onderwijs.html" target="_blank">Workshop Robotics and Vision</a><font color="white"> @ </font><a href="http://www.smrdelft.nl/" target="_blank">SMR Delft</a></li>
-				  <li style='color: tomato;'><a href="https://youtu.be/5S1V2cG_lo4" target="_blank">Digital factory planning and validation</a></li>
-				  <li style='color: tomato;'><a href="https://witusj.github.io/VisioningSI/_site/index.html" target="_blank">.... meer</a></li>
-				</ul>
+					<h2>Inspiratie</h2>
+					<ul>
+						<li style='color: tomato;'><a href="https://techcrunch.com/2017/05/12/yaypay-introduces-cash-flow-forecasts-for-accounts-receivable/" target="_blank">Debiteurenadministratie 4.0</a></li>
+						<li style='color: tomato;'><a href="https://witusj.github.io/MinorSI/2-onderwijs.html" target="_blank">Workshop Robotics and Vision</a>
+							<font color="white"> @ </font><a href="http://www.smrdelft.nl/" target="_blank">SMR Delft</a></li>
+						<li style='color: tomato;'><a href="https://youtu.be/5S1V2cG_lo4" target="_blank">Digital factory planning and validation</a></li>
+						<li style='color: tomato;'><a href="https://witusj.github.io/VisioningSI/_site/index.html" target="_blank">.... meer</a></li>
+					</ul>
 				</section>
-				
+
 				<section class="nopad">
-				  <h2>Als je klaar bent ....</h2>
-				    <iframe src="https://jsx.github.io/examples/shooting/shooting.html" width="400" height="600"></iframe>
+					<h2>Als je klaar bent ....</h2>
+					<iframe src="https://jsx.github.io/examples/shooting/shooting.html" width="400" height="600"></iframe>
 				</section>
-				
-				</section>
-				
-			</div>
+
+			</section>
+
 		</div>
+	</div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
 
-		<script>
-			// More info https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				history: true,
-				
-				width: "100%",
-        height: "100%",
-        margin: 0,
-        minScale: 1,
-        maxScale: 1,
-        
-        chalkboard: {
-          theme: "whiteboard",
-          color: [ 'Red', 'rgba(255,255,255,0.5)' ]
-        },
+	<script>
+		// More info https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			history: true,
 
-        keyboard: {
-          67: function() { RevealChalkboard.toggleNotesCanvas() },    // toggle notes canvas when 'c' is pressed
-          66: function() { RevealChalkboard.toggleChalkboard() }, // toggle chalkboard when 'b' is pressed
-          46: function() { RevealChalkboard.clear() },    // clear chalkboard when 'DEL' is pressed
-           8: function() { RevealChalkboard.reset() },    // reset chalkboard data on current slide when 'BACKSPACE' is pressed
-          68: function() { RevealChalkboard.download() }, // downlad recorded chalkboard drawing when 'd' is pressed
-        },
+			width: "100%",
+			height: "100%",
+			margin: 0,
+			minScale: 1,
+			maxScale: 1,
 
-				// More info https://github.com/hakimel/reveal.js#dependencies
-				dependencies: [
-				  { src: 'plugin/chalkboard/chalkboard.js', async: true },
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				],
-			});
-		</script>
-	</body>
+			chalkboard: {
+				theme: "whiteboard",
+				color: ['Red', 'rgba(255,255,255,0.5)']
+			},
+
+			keyboard: {
+				67: function() {
+					RevealChalkboard.toggleNotesCanvas()
+				}, // toggle notes canvas when 'c' is pressed
+				66: function() {
+					RevealChalkboard.toggleChalkboard()
+				}, // toggle chalkboard when 'b' is pressed
+				46: function() {
+					RevealChalkboard.clear()
+				}, // clear chalkboard when 'DEL' is pressed
+				8: function() {
+					RevealChalkboard.reset()
+				}, // reset chalkboard data on current slide when 'BACKSPACE' is pressed
+				68: function() {
+					RevealChalkboard.download()
+				}, // downlad recorded chalkboard drawing when 'd' is pressed
+			},
+
+			// More info https://github.com/hakimel/reveal.js#dependencies
+			dependencies: [{
+					src: 'plugin/chalkboard/chalkboard.js',
+					async: true
+				},
+				{
+					src: 'plugin/markdown/marked.js'
+				},
+				{
+					src: 'plugin/markdown/markdown.js'
+				},
+				{
+					src: 'plugin/notes/notes.js',
+					async: true
+				},
+				{
+					src: 'plugin/highlight/highlight.js',
+					async: true,
+					callback: function() {
+						hljs.initHighlightingOnLoad();
+					}
+				}
+			],
+		});
+	</script>
+</body>
+
 </html>
