@@ -51,7 +51,20 @@ plot(network, layout=layout.circle, vertex.size=80, vertex.color = c("#F1948A", 
     + Unified data warehouses
     + Intensieve automatisering
     + Nieuwe taken / rollen
+    
+## Disruptie
+
+<p>Stel iemand laat in de Amsterdam Arena op de middenstip een druppel water vallen, een seconde later twee, een seconde later vier, etc. etc.
+</p>
+<p>
+Hoe lang duurt het voordat de Arena tot aan de nok is gevuld met water?
+</p>
+
+## Disruptie
+
+<img src="image/arena1.gif">
 
 ## Thanks
 
 + [Andrew Ng](https://youtu.be/NKpuX_yzdYs)
+

@@ -1,597 +1,636 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="pandoc">
-  <meta name="author" content="Witek ten Hove" />
-  <title>Digital Business Innovation</title>
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="dbi_files/reveal.js-3.3.0.1/css/reveal.css"/>
-
-<link rel="stylesheet" href="dbi_files/reveal.js-3.3.0.1/css/theme/black.css" id="theme">
-
-<style type="text/css">
-.knitr .inline {
-  background-color: #f7f7f7;
-  border:solid 1px #B0B0B0;
-}
-.error {
-	font-weight: bold;
-	color: #FF0000;
-}
-.warning {
-	font-weight: bold;
-}
-.message {
-	font-style: italic;
-}
-.source, .output, .warning, .error, .message {
-	padding: 0 1em;
-  border:solid 1px #F7F7F7;
-}
-.source {
-  background-color: #f5f5f5;
-}
-.rimage .left {
-  text-align: left;
-}
-.rimage .right {
-  text-align: right;
-}
-.rimage .center {
-  text-align: center;
-}
-.hl.num {
-  color: #AF0F91;
-}
-.hl.str {
-  color: #317ECC;
-}
-.hl.com {
-  color: #AD95AF;
-  font-style: italic;
-}
-.hl.opt {
-  color: #000000;
-}
-.hl.std {
-  color: #585858;
-}
-.hl.kwa {
-  color: #295F94;
-  font-weight: bold;
-}
-.hl.kwb {
-  color: #B05A65;
-}
-.hl.kwc {
-  color: #55aa55;
-}
-.hl.kwd {
-  color: #BC5A65;
-  font-weight: bold;
-}
-.image {
-  display: inline-block;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 5%;
-}
-.image.recolour {
-  transition: filter 1s, transform 1s;
-}
-.image:hover.recolour {
-  filter: hue-rotate(180deg)
-}
-.image:hover.recolour {
-  transform: rotate(20deg);
-}
-img#noborder
-{
-  border:none !important;
-}
-section.nopad {
-  padding: 0px; margin: 0px;
-}
-
-</style>
-
-    <style type="text/css">code{white-space: pre;}</style>
-
-
-<!-- Printing and PDF exports -->
-<script id="paper-css" type="application/dynamic-css">
-
-/* Default Print Stylesheet Template
-   by Rob Glazebrook of CSSnewbie.com
-   Last Updated: June 4, 2008
-
-   Feel free (nay, compelled) to edit, append, and
-   manipulate this file as you see fit. */
-
-
-@media print {
-
-	/* SECTION 1: Set default width, margin, float, and
-	   background. This prevents elements from extending
-	   beyond the edge of the printed page, and prevents
-	   unnecessary background images from printing */
-	html {
-		background: #fff;
-		width: auto;
-		height: auto;
-		overflow: visible;
-	}
-	body {
-		background: #fff;
-		font-size: 20pt;
-		width: auto;
-		height: auto;
-		border: 0;
-		margin: 0 5%;
-		padding: 0;
-		overflow: visible;
-		float: none !important;
-	}
-
-	/* SECTION 2: Remove any elements not needed in print.
-	   This would include navigation, ads, sidebars, etc. */
-	.nestedarrow,
-	.controls,
-	.fork-reveal,
-	.share-reveal,
-	.state-background,
-	.reveal .progress,
-	.reveal .backgrounds {
-		display: none !important;
-	}
-
-	/* SECTION 3: Set body font face, size, and color.
-	   Consider using a serif font for readability. */
-	body, p, td, li, div {
-		font-size: 20pt!important;
-		font-family: Georgia, "Times New Roman", Times, serif !important;
-		color: #000;
-	}
-
-	/* SECTION 4: Set heading font face, sizes, and color.
-	   Differentiate your headings from your body text.
-	   Perhaps use a large sans-serif for distinction. */
-	h1,h2,h3,h4,h5,h6 {
-		color: #000!important;
-		height: auto;
-		line-height: normal;
-		font-family: Georgia, "Times New Roman", Times, serif !important;
-		text-shadow: 0 0 0 #000 !important;
-		text-align: left;
-		letter-spacing: normal;
-	}
-	/* Need to reduce the size of the fonts for printing */
-	h1 { font-size: 28pt !important;  }
-	h2 { font-size: 24pt !important; }
-	h3 { font-size: 22pt !important; }
-	h4 { font-size: 22pt !important; font-variant: small-caps; }
-	h5 { font-size: 21pt !important; }
-	h6 { font-size: 20pt !important; font-style: italic; }
-
-	/* SECTION 5: Make hyperlinks more usable.
-	   Ensure links are underlined, and consider appending
-	   the URL to the end of the link for usability. */
-	a:link,
-	a:visited {
-		color: #000 !important;
-		font-weight: bold;
-		text-decoration: underline;
-	}
-	/*
-	.reveal a:link:after,
-	.reveal a:visited:after {
-		content: " (" attr(href) ") ";
-		color: #222 !important;
-		font-size: 90%;
-	}
-	*/
-
-
-	/* SECTION 6: more reveal.js specific additions by @skypanther */
-	ul, ol, div, p {
-		visibility: visible;
-		position: static;
-		width: auto;
-		height: auto;
-		display: block;
-		overflow: visible;
-		margin: 0;
-		text-align: left !important;
-	}
-	.reveal pre,
-	.reveal table {
-		margin-left: 0;
-		margin-right: 0;
-	}
-	.reveal pre code {
-		padding: 20px;
-		border: 1px solid #ddd;
-	}
-	.reveal blockquote {
-		margin: 20px 0;
-	}
-	.reveal .slides {
-		position: static !important;
-		width: auto !important;
-		height: auto !important;
-
-		left: 0 !important;
-		top: 0 !important;
-		margin-left: 0 !important;
-		margin-top: 0 !important;
-		padding: 0 !important;
-		zoom: 1 !important;
-
-		overflow: visible !important;
-		display: block !important;
-
-		text-align: left !important;
-		-webkit-perspective: none;
-		   -moz-perspective: none;
-		    -ms-perspective: none;
-		        perspective: none;
-
-		-webkit-perspective-origin: 50% 50%;
-		   -moz-perspective-origin: 50% 50%;
-		    -ms-perspective-origin: 50% 50%;
-		        perspective-origin: 50% 50%;
-	}
-	.reveal .slides section {
-		visibility: visible !important;
-		position: static !important;
-		width: auto !important;
-		height: auto !important;
-		display: block !important;
-		overflow: visible !important;
-
-		left: 0 !important;
-		top: 0 !important;
-		margin-left: 0 !important;
-		margin-top: 0 !important;
-		padding: 60px 20px !important;
-		z-index: auto !important;
-
-		opacity: 1 !important;
-
-		page-break-after: always !important;
-
-		-webkit-transform-style: flat !important;
-		   -moz-transform-style: flat !important;
-		    -ms-transform-style: flat !important;
-		        transform-style: flat !important;
-
-		-webkit-transform: none !important;
-		   -moz-transform: none !important;
-		    -ms-transform: none !important;
-		        transform: none !important;
-
-		-webkit-transition: none !important;
-		   -moz-transition: none !important;
-		    -ms-transition: none !important;
-		        transition: none !important;
-	}
-	.reveal .slides section.stack {
-		padding: 0 !important;
-	}
-	.reveal section:last-of-type {
-		page-break-after: avoid !important;
-	}
-	.reveal section .fragment {
-		opacity: 1 !important;
-		visibility: visible !important;
-
-		-webkit-transform: none !important;
-		   -moz-transform: none !important;
-		    -ms-transform: none !important;
-		        transform: none !important;
-	}
-	.reveal section img {
-		display: block;
-		margin: 15px 0px;
-		background: rgba(255,255,255,1);
-		border: 1px solid #666;
-		box-shadow: none;
-	}
-
-	.reveal section small {
-		font-size: 0.8em;
-	}
-
-}  
-</script>
-
-
-<script id="pdf-css" type="application/dynamic-css">
-    
-/**
- * This stylesheet is used to print reveal.js
- * presentations to PDF.
- *
- * https://github.com/hakimel/reveal.js#pdf-export
- */
-
-* {
-	-webkit-print-color-adjust: exact;
-}
-
-body {
-	margin: 0 auto !important;
-	border: 0;
-	padding: 0;
-	float: none !important;
-	overflow: visible;
-}
-
-html {
-	width: 100%;
-	height: 100%;
-	overflow: visible;
-}
-
-/* Remove any elements not needed in print. */
-.nestedarrow,
-.reveal .controls,
-.reveal .progress,
-.reveal .playback,
-.reveal.overview,
-.fork-reveal,
-.share-reveal,
-.state-background {
-	display: none !important;
-}
-
-h1, h2, h3, h4, h5, h6 {
-	text-shadow: 0 0 0 #000 !important;
-}
-
-.reveal pre code {
-	overflow: hidden !important;
-	font-family: Courier, 'Courier New', monospace !important;
-}
-
-ul, ol, div, p {
-	visibility: visible;
-	position: static;
-	width: auto;
-	height: auto;
-	display: block;
-	overflow: visible;
-	margin: auto;
-}
-.reveal {
-	width: auto !important;
-	height: auto !important;
-	overflow: hidden !important;
-}
-.reveal .slides {
-	position: static;
-	width: 100%;
-	height: auto;
-
-	left: auto;
-	top: auto;
-	margin: 0 !important;
-	padding: 0 !important;
-
-	overflow: visible;
-	display: block;
-
-	-webkit-perspective: none;
-	   -moz-perspective: none;
-	    -ms-perspective: none;
-	        perspective: none;
-
-	-webkit-perspective-origin: 50% 50%; /* there isn't a none/auto value but 50-50 is the default */
-	   -moz-perspective-origin: 50% 50%;
-	    -ms-perspective-origin: 50% 50%;
-	        perspective-origin: 50% 50%;
-}
-
-.reveal .slides section {
-	page-break-after: always !important;
-
-	visibility: visible !important;
-	position: relative !important;
-	display: block !important;
-	position: relative !important;
-
-	margin: 0 !important;
-	padding: 0 !important;
-	box-sizing: border-box !important;
-	min-height: 1px;
-
-	opacity: 1 !important;
-
-	-webkit-transform-style: flat !important;
-	   -moz-transform-style: flat !important;
-	    -ms-transform-style: flat !important;
-	        transform-style: flat !important;
-
-	-webkit-transform: none !important;
-	   -moz-transform: none !important;
-	    -ms-transform: none !important;
-	        transform: none !important;
-}
-
-.reveal section.stack {
-	margin: 0 !important;
-	padding: 0 !important;
-	page-break-after: avoid !important;
-	height: auto !important;
-	min-height: auto !important;
-}
-
-.reveal img {
-	box-shadow: none;
-}
-
-.reveal .roll {
-	overflow: visible;
-	line-height: 1em;
-}
-
-/* Slide backgrounds are placed inside of their slide when exporting to PDF */
-.reveal section .slide-background {
-	display: block !important;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	z-index: -1;
-}
-
-/* All elements should be above the slide-background */
-.reveal section>* {
-	position: relative;
-	z-index: 1;
-}
-
-/* Display slide speaker notes when 'showNotes' is enabled */
-.reveal .speaker-notes-pdf {
-	display: block;
-	width: 100%;
-	max-height: none;
-	left: auto;
-	top: auto;
-	z-index: 100;
-}
-
-/* Display slide numbers when 'slideNumber' is enabled */
-.reveal .slide-number-pdf {
-	display: block;
-	position: absolute;
-	font-size: 14px;
-}
-
-</script>
-
-
-<script>
-var style = document.createElement( 'style' );
-style.type = 'text/css';
-var style_script_id = window.location.search.match( /print-pdf/gi ) ? 'pdf-css' : 'paper-css';
-var style_script = document.getElementById(style_script_id).text;
-style.innerHTML = style_script;
-document.getElementsByTagName('head')[0].appendChild(style);
-</script>
-
+	<meta charset="utf-8">
+	<meta name="generator" content="pandoc">
+	<meta name="author" content="Witek ten Hove" />
+	<title>Digital Business Innovation</title>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+	<link rel="stylesheet" href="dbi_files/reveal.js-3.3.0.1/css/reveal.css"/>
+	
+	<link rel="stylesheet" href="dbi_files/reveal.js-3.3.0.1/css/theme/black.css" id="theme">
+	
+	<style type="text/css">
+		.knitr .inline {
+			background-color: #f7f7f7;
+			border:solid 1px #B0B0B0;
+		}
+		.error {
+			font-weight: bold;
+			color: #FF0000;
+		}
+		.warning {
+			font-weight: bold;
+		}
+		.message {
+			font-style: italic;
+		}
+		.source, .output, .warning, .error, .message {
+			padding: 0 1em;
+			border:solid 1px #F7F7F7;
+		}
+		.source {
+			background-color: #f5f5f5;
+		}
+		.rimage .left {
+			text-align: left;
+		}
+		.rimage .right {
+			text-align: right;
+		}
+		.rimage .center {
+			text-align: center;
+		}
+		.hl.num {
+			color: #AF0F91;
+		}
+		.hl.str {
+			color: #317ECC;
+		}
+		.hl.com {
+			color: #AD95AF;
+			font-style: italic;
+		}
+		.hl.opt {
+			color: #000000;
+		}
+		.hl.std {
+			color: #585858;
+		}
+		.hl.kwa {
+			color: #295F94;
+			font-weight: bold;
+		}
+		.hl.kwb {
+			color: #B05A65;
+		}
+		.hl.kwc {
+			color: #55aa55;
+		}
+		.hl.kwd {
+			color: #BC5A65;
+			font-weight: bold;
+		}
+		.image {
+			display: inline-block;
+			background-repeat: no-repeat;
+			background-size: cover;
+			border-radius: 5%;
+		}
+		.image.recolour {
+			transition: filter 1s, transform 1s;
+		}
+		.image:hover.recolour {
+			filter: hue-rotate(180deg)
+		}
+		.image:hover.recolour {
+			transform: rotate(20deg);
+		}
+		img#noborder
+		{
+			border:none !important;
+		}
+		section.nopad {
+			padding: 0px; margin: 0px;
+		}
+		
+	</style>
+	
+	<style type="text/css">code{white-space: pre;}</style>
+	
+	
+	<!-- Printing and PDF exports -->
+	<script id="paper-css" type="application/dynamic-css">
+		
+		/* Default Print Stylesheet Template
+		by Rob Glazebrook of CSSnewbie.com
+		Last Updated: June 4, 2008
+		
+		Feel free (nay, compelled) to edit, append, and
+		manipulate this file as you see fit. */
+		
+		
+		@media print {
+			
+			/* SECTION 1: Set default width, margin, float, and
+			background. This prevents elements from extending
+			beyond the edge of the printed page, and prevents
+			unnecessary background images from printing */
+			html {
+				background: #fff;
+				width: auto;
+				height: auto;
+				overflow: visible;
+			}
+			body {
+				background: #fff;
+				font-size: 20pt;
+				width: auto;
+				height: auto;
+				border: 0;
+				margin: 0 5%;
+				padding: 0;
+				overflow: visible;
+				float: none !important;
+			}
+			
+			/* SECTION 2: Remove any elements not needed in print.
+			This would include navigation, ads, sidebars, etc. */
+			.nestedarrow,
+			.controls,
+			.fork-reveal,
+			.share-reveal,
+			.state-background,
+			.reveal .progress,
+			.reveal .backgrounds {
+				display: none !important;
+			}
+			
+			/* SECTION 3: Set body font face, size, and color.
+			Consider using a serif font for readability. */
+			body, p, td, li, div {
+				font-size: 20pt!important;
+				font-family: Georgia, "Times New Roman", Times, serif !important;
+				color: #000;
+			}
+			
+			/* SECTION 4: Set heading font face, sizes, and color.
+			Differentiate your headings from your body text.
+			Perhaps use a large sans-serif for distinction. */
+			h1,h2,h3,h4,h5,h6 {
+				color: #000!important;
+				height: auto;
+				line-height: normal;
+				font-family: Georgia, "Times New Roman", Times, serif !important;
+				text-shadow: 0 0 0 #000 !important;
+				text-align: left;
+				letter-spacing: normal;
+			}
+			/* Need to reduce the size of the fonts for printing */
+			h1 { font-size: 28pt !important;  }
+			h2 { font-size: 24pt !important; }
+			h3 { font-size: 22pt !important; }
+			h4 { font-size: 22pt !important; font-variant: small-caps; }
+			h5 { font-size: 21pt !important; }
+			h6 { font-size: 20pt !important; font-style: italic; }
+			
+			/* SECTION 5: Make hyperlinks more usable.
+			Ensure links are underlined, and consider appending
+			the URL to the end of the link for usability. */
+			a:link,
+			a:visited {
+				color: #000 !important;
+				font-weight: bold;
+				text-decoration: underline;
+			}
+			/*
+			.reveal a:link:after,
+			.reveal a:visited:after {
+				content: " (" attr(href) ") ";
+				color: #222 !important;
+				font-size: 90%;
+			}
+			*/
+			
+			
+			/* SECTION 6: more reveal.js specific additions by @skypanther */
+			ul, ol, div, p {
+				visibility: visible;
+				position: static;
+				width: auto;
+				height: auto;
+				display: block;
+				overflow: visible;
+				margin: 0;
+				text-align: left !important;
+			}
+			.reveal pre,
+			.reveal table {
+				margin-left: 0;
+				margin-right: 0;
+			}
+			.reveal pre code {
+				padding: 20px;
+				border: 1px solid #ddd;
+			}
+			.reveal blockquote {
+				margin: 20px 0;
+			}
+			.reveal .slides {
+				position: static !important;
+				width: auto !important;
+				height: auto !important;
+				
+				left: 0 !important;
+				top: 0 !important;
+				margin-left: 0 !important;
+				margin-top: 0 !important;
+				padding: 0 !important;
+				zoom: 1 !important;
+				
+				overflow: visible !important;
+				display: block !important;
+				
+				text-align: left !important;
+				-webkit-perspective: none;
+				-moz-perspective: none;
+				-ms-perspective: none;
+				perspective: none;
+				
+				-webkit-perspective-origin: 50% 50%;
+				-moz-perspective-origin: 50% 50%;
+				-ms-perspective-origin: 50% 50%;
+				perspective-origin: 50% 50%;
+			}
+			.reveal .slides section {
+				visibility: visible !important;
+				position: static !important;
+				width: auto !important;
+				height: auto !important;
+				display: block !important;
+				overflow: visible !important;
+				
+				left: 0 !important;
+				top: 0 !important;
+				margin-left: 0 !important;
+				margin-top: 0 !important;
+				padding: 60px 20px !important;
+				z-index: auto !important;
+				
+				opacity: 1 !important;
+				
+				page-break-after: always !important;
+				
+				-webkit-transform-style: flat !important;
+				-moz-transform-style: flat !important;
+				-ms-transform-style: flat !important;
+				transform-style: flat !important;
+				
+				-webkit-transform: none !important;
+				-moz-transform: none !important;
+				-ms-transform: none !important;
+				transform: none !important;
+				
+				-webkit-transition: none !important;
+				-moz-transition: none !important;
+				-ms-transition: none !important;
+				transition: none !important;
+			}
+			.reveal .slides section.stack {
+				padding: 0 !important;
+			}
+			.reveal section:last-of-type {
+				page-break-after: avoid !important;
+			}
+			.reveal section .fragment {
+				opacity: 1 !important;
+				visibility: visible !important;
+				
+				-webkit-transform: none !important;
+				-moz-transform: none !important;
+				-ms-transform: none !important;
+				transform: none !important;
+			}
+			.reveal section img {
+				display: block;
+				margin: 15px 0px;
+				background: rgba(255,255,255,1);
+				border: 1px solid #666;
+				box-shadow: none;
+			}
+			
+			.reveal section small {
+				font-size: 0.8em;
+			}
+			
+		}  
+	</script>
+	
+	
+	<script id="pdf-css" type="application/dynamic-css">
+		
+		/**
+		* This stylesheet is used to print reveal.js
+		* presentations to PDF.
+		*
+		* https://github.com/hakimel/reveal.js#pdf-export
+		*/
+		
+		* {
+			-webkit-print-color-adjust: exact;
+		}
+		
+		body {
+			margin: 0 auto !important;
+			border: 0;
+			padding: 0;
+			float: none !important;
+			overflow: visible;
+		}
+		
+		html {
+			width: 100%;
+			height: 100%;
+			overflow: visible;
+		}
+		
+		/* Remove any elements not needed in print. */
+		.nestedarrow,
+		.reveal .controls,
+		.reveal .progress,
+		.reveal .playback,
+		.reveal.overview,
+		.fork-reveal,
+		.share-reveal,
+		.state-background {
+			display: none !important;
+		}
+		
+		h1, h2, h3, h4, h5, h6 {
+			text-shadow: 0 0 0 #000 !important;
+		}
+		
+		.reveal pre code {
+			overflow: hidden !important;
+			font-family: Courier, 'Courier New', monospace !important;
+		}
+		
+		ul, ol, div, p {
+			visibility: visible;
+			position: static;
+			width: auto;
+			height: auto;
+			display: block;
+			overflow: visible;
+			margin: auto;
+		}
+		.reveal {
+			width: auto !important;
+			height: auto !important;
+			overflow: hidden !important;
+		}
+		.reveal .slides {
+			position: static;
+			width: 100%;
+			height: auto;
+			
+			left: auto;
+			top: auto;
+			margin: 0 !important;
+			padding: 0 !important;
+			
+			overflow: visible;
+			display: block;
+			
+			-webkit-perspective: none;
+			-moz-perspective: none;
+			-ms-perspective: none;
+			perspective: none;
+			
+			-webkit-perspective-origin: 50% 50%; /* there isn't a none/auto value but 50-50 is the default */
+			-moz-perspective-origin: 50% 50%;
+			-ms-perspective-origin: 50% 50%;
+			perspective-origin: 50% 50%;
+		}
+		
+		.reveal .slides section {
+			page-break-after: always !important;
+			
+			visibility: visible !important;
+			position: relative !important;
+			display: block !important;
+			position: relative !important;
+			
+			margin: 0 !important;
+			padding: 0 !important;
+			box-sizing: border-box !important;
+			min-height: 1px;
+			
+			opacity: 1 !important;
+			
+			-webkit-transform-style: flat !important;
+			-moz-transform-style: flat !important;
+			-ms-transform-style: flat !important;
+			transform-style: flat !important;
+			
+			-webkit-transform: none !important;
+			-moz-transform: none !important;
+			-ms-transform: none !important;
+			transform: none !important;
+		}
+		
+		.reveal section.stack {
+			margin: 0 !important;
+			padding: 0 !important;
+			page-break-after: avoid !important;
+			height: auto !important;
+			min-height: auto !important;
+		}
+		
+		.reveal img {
+			box-shadow: none;
+		}
+		
+		.reveal .roll {
+			overflow: visible;
+			line-height: 1em;
+		}
+		
+		/* Slide backgrounds are placed inside of their slide when exporting to PDF */
+		.reveal section .slide-background {
+			display: block !important;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			z-index: -1;
+		}
+		
+		/* All elements should be above the slide-background */
+		.reveal section>* {
+			position: relative;
+			z-index: 1;
+		}
+		
+		/* Display slide speaker notes when 'showNotes' is enabled */
+		.reveal .speaker-notes-pdf {
+			display: block;
+			width: 100%;
+			max-height: none;
+			left: auto;
+			top: auto;
+			z-index: 100;
+		}
+		
+		/* Display slide numbers when 'slideNumber' is enabled */
+		.reveal .slide-number-pdf {
+			display: block;
+			position: absolute;
+			font-size: 14px;
+		}
+		
+	</script>
+	
+	
+	<script>
+		var style = document.createElement( 'style' );
+		style.type = 'text/css';
+		var style_script_id = window.location.search.match( /print-pdf/gi ) ? 'pdf-css' : 'paper-css';
+		var style_script = document.getElementById(style_script_id).text;
+		style.innerHTML = style_script;
+		document.getElementsByTagName('head')[0].appendChild(style);
+	</script>
+	
 </head>
 <body>
-  <div class="reveal">
-    <div class="slides">
-
-<section>
-    <h1 class="title">Digital Business Innovation</h1>
-    <br>
-    <h3 class="author" style='color: #F7DC6F;'>Data as an Asset</h3>
-</section>
-
-<section>
-			    
-						<h1>Witek ten Hove</h1>
-						<p>
-						<font color="tomato">|</font>
-						<a href="https://github.com/witusj" target="_blank"><img class = "image recolour" id="noborder" src="image/github.png" height="42" width="42" style="vertical-align:middle"></a> <font color="tomato">|</font> 
-						<a href="https://www.linkedin.com/in/witektenhove/" target="_blank"><img class = "image recolour" id="noborder" src="image/linked.png" height="42" width="42" style="vertical-align:middle"></a> <font color="tomato">|</font>
-						<a href="https://witusj.github.io/MinorSI/" target="_blank"><img class = "image recolour" id="noborder" src="image/msi.png" height="42" width="90" style="vertical-align:middle"></a> <font color="tomato">|</font>
-						<a href="https://witusj.github.io/personal/" target="_blank"><img class = "image recolour" id="noborder" src="image/meme.png" height="42" width="42" style="vertical-align:middle"></a> <font color="tomato">|</font>
-					</p><br>
-					<i>minorsmart.github.io<font color="tomato">/</font>presentations<font color="tomato">/</font>dbi</i>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h1 class="title">Digital Business Innovation</h1>
+				<br>
+				<h3 class="author" style='color: #F7DC6F;'>Data as an Asset</h3>
+			</section>
+			<section>	
+				<h1>Witek ten Hove</h1>
+				<p>
+					<font color="tomato">|</font>
+					<a href="https://github.com/witusj" target="_blank"><img class = "image recolour" id="noborder" src="image/github.png" height="42" width="42" style="vertical-align:middle"></a> <font color="tomato">|</font> 
+					<a href="https://www.linkedin.com/in/witektenhove/" target="_blank"><img class = "image recolour" id="noborder" src="image/linked.png" height="42" width="42" style="vertical-align:middle"></a> <font color="tomato">|</font>
+					<a href="https://witusj.github.io/MinorSI/" target="_blank"><img class = "image recolour" id="noborder" src="image/msi.png" height="42" width="90" style="vertical-align:middle"></a> <font color="tomato">|</font>
+					<a href="https://witusj.github.io/personal/" target="_blank"><img class = "image recolour" id="noborder" src="image/meme.png" height="42" width="42" style="vertical-align:middle"></a> <font color="tomato">|</font>
+				</p><br>
+				<i>minorsmart.github.io<font color="tomato">/</font>presentations<font color="tomato">/</font>dbi</i>
+			</section>
+			<section>
+				<section id="digitaal-business-model" class="slide level2">
+					<h2>Digital business model</h2>
+					<p class="fragment"><img src="dbi_files/figure-revealjs/unnamed-chunk-1-1.png" width="768" /></p>
 				</section>
-
-<section id="digitaal-business-model" class="slide level2">
-<h2>Digitaal business model</h2>
-<p><img src="dbi_files/figure-revealjs/unnamed-chunk-1-1.png" width="768" /></p>
-</section>
-<section id="wat-is-een-internetbedrijf" class="slide level2">
-<h2>Wat is een internetbedrijf?</h2>
-<ul>
-<li style='color: tomato;'><p style='color: white;'>Supermarkt + website <span class="math inline" style='color: #FFEB7E;'>\(\ne\)</span> internetbedrijf</p></li>
-<li style='color: tomato;'><p style='color: white;'>Features internetbedrijf:</p>
-<ul>
-<li style='color: tomato;'><p style='color: white;'>A/B testing</p></li>
-<li style='color: tomato;'><p style='color: white;'>Korte ontwikkelcycli</p></li>
-<li style='color: tomato;'><p style='color: white;'>Beslissers zijn engineers en productmanagers</p></li>
-</ul></li>
-</ul>
-</section>
-<section id="wat-is-een-ai-bedrijf" class="slide level2">
-<h2>Wat is een AI-bedrijf?</h2>
-<ul>
-<li style='color: tomato;'><p style='color: white;'>Internetbedrijf + AI <span class="math inline" style='color: #FFEB7E;'>\(\ne\)</span> AI-bedrijf</p></li>
-<li style='color: tomato;'><p style='color: white;'>Features AI-bedrijf:</p>
-<ul>
-<li style='color: tomato;'><p style='color: white;'>Strategische data-acquisitie</p></li>
-<li style='color: tomato;'><p style='color: white;'>Unified data warehouses</p></li>
-<li style='color: tomato;'><p style='color: white;'>Intensieve automatisering</p></li>
-<li style='color: tomato;'><p style='color: white;'>Nieuwe taken / rollen</p></li>
-</ul></li>
-</ul>
-</section>
-<section id="thanks" class="slide level2">
-<h2>Thanks</h2>
-<ul>
-<li style='color: tomato;'><a href="https://youtu.be/NKpuX_yzdYs">Andrew Ng</a></li>
-</ul>
-</section>
-    </div>
-  </div>
-
-  <script src="dbi_files/reveal.js-3.3.0.1/lib/js/head.min.js"></script>
-  <script src="dbi_files/reveal.js-3.3.0.1/js/reveal.js"></script>
-
-  <script>
-
-      // Full list of configuration options available at:
-      // https://github.com/hakimel/reveal.js#configuration
-      Reveal.initialize({
-        // Display the page number of the current slide
-        slideNumber: true,
-        // Push each slide change to the browser history
-        history: true,
-        // Vertical centering of slides
-        center: false,
-        // Transition style
-        transition: 'default', // none/fade/slide/convex/concave/zoom
-        // Transition style for full page slide backgrounds
-        backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
-
-
-
-        // Optional reveal.js plugins
-        dependencies: [
-        ]
-      });
-    </script>
-  <!-- dynamically load mathjax for compatibility with self-contained -->
-  <script>
-    (function () {
-      var script = document.createElement("script");
-      script.type = "text/javascript";
-      script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
-      document.getElementsByTagName("head")[0].appendChild(script);
-    })();
-  </script>
-
-<script>
-  (function() {
-    if (window.jQuery) {
-      Reveal.addEventListener( 'slidechanged', function(event) {  
-        window.jQuery(event.previousSlide).trigger('hidden');
-        window.jQuery(event.currentSlide).trigger('shown');
-      });
-    }
-  })();
-</script>
-
-
-  </body>
-</html>
+				<section id="wat-is-een-internetbedrijf" class="slide level2">
+					<h2>Wat is een internetbedrijf?</h2>
+					<ul>
+						<li style='color: tomato;'><p style='color: white;' class="fragment">Supermarkt + website <span class="math inline" style='color: #FFEB7E;'>\(\ne\)</span> internetbedrijf</p></li>
+						<li style='color: tomato;'><p style='color: white;' class="fragment">Features internetbedrijf:</p>
+							<ul>
+								<li style='color: tomato;'><p style='color: white;' class="fragment">A/B testing</p></li>
+								<li style='color: tomato;'><p style='color: white;' class="fragment">Korte ontwikkelcycli</p></li>
+								<li style='color: tomato;'><p style='color: white;' class="fragment">Beslissers zijn engineers en productmanagers</p></li>
+							</ul></li>
+						</ul>
+					</section>
+					<section id="wat-is-een-ai-bedrijf" class="slide level2">
+						<h2>Wat is een AI-bedrijf?</h2>
+						<ul>
+							<li style='color: tomato;'><p style='color: white;' class="fragment">Internetbedrijf + AI <span class="math inline" style='color: #FFEB7E;'>\(\ne\)</span> AI-bedrijf</p></li>
+							<li style='color: tomato;'><p style='color: white;' class="fragment">Features AI-bedrijf:</p>
+								<ul>
+									<li style='color: tomato;'><p style='color: white;' class="fragment">Strategische data-acquisitie</p></li>
+									<li style='color: tomato;'><p style='color: white;' class="fragment">Unified data warehouses</p></li>
+									<li style='color: tomato;'><p style='color: white;' class="fragment">Intensieve automatisering</p></li>
+									<li style='color: tomato;'><p style='color: white;' class="fragment">Nieuwe taken / rollen</p></li>
+								</ul></li>
+							</ul>
+						</section>
+						<section id="thanks" class="slide level2">
+							<h2>Thanks</h2>
+							<ul>
+								<li style='color: tomato;'><a href="https://youtu.be/NKpuX_yzdYs">Andrew Ng</a></li>
+							</ul>
+						</section>
+			    </section>
+					<section>
+						<section id="disruptie" class="slide level2">
+							<h2>Disruptie</h2>
+							<p>
+								Stel iemand laat in de Amsterdam Arena op de middenstip <span style='color: tomato;'>één</span> druppel water vallen, een seconde later <span style='color: tomato;'>twee</span>, een seconde later <span style='color: tomato;'>vier</span>, etc. etc.
+							</p>
+							<p>
+								Hoe lang duurt het voordat de Arena tot aan de nok is gevuld met water?
+							</p>
+						</section>
+						<section id="disruptie-1" class="slide level2">
+							<h2>Disruptie</h2>
+							<p><img src="image/arena1.gif"></p>
+						</section>
+						<section>
+							<h2>Digital disruption</h2>
+							<p><img src="image/digitaldisruption.png"></p>
+						</section>
+					</section>
+					<section>
+						<section>
+							<p><img src="https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fblogs-images.forbes.com%2Fgilpress%2Ffiles%2F2017%2F04%2FForrester_digitalPredator.jpg" width="500" /></p>
+						</section>
+						<section>
+							<h2>AI Toepassingsgebieden</h2>
+							<ul>
+								<li style='color: tomato;'><a href="https://en.wikipedia.org/wiki/Knowledge_representation_and_reasoning" title="Knowledge representation and reasoning" target="_blank">Knowledge reasoning</a></li>
+								<li style='color: tomato;'><a href="https://en.wikipedia.org/wiki/Automated_planning_and_scheduling" title="Automated planning and scheduling" target="_blank">Planning</a></li>
+								<li style='color: tomato;'><a href="https://en.wikipedia.org/wiki/Machine_learning" title="Machine learning" target="_blank">Machine learning</a></li>
+								<li style='color: tomato;'><a href="https://en.wikipedia.org/wiki/Natural_language_processing" title="Natural language processing" target="_blank">Natural language processing</a></li>
+								<li style='color: tomato;'><a href="https://en.wikipedia.org/wiki/Computer_vision" title="Computer vision" target="_blank">Computer vision</a></li>
+								<li style='color: tomato;'><a href="https://en.wikipedia.org/wiki/Robotics" title="Robotics" target="_blank">Robotics</a></li>
+								<li style='color: tomato;'><a href="https://en.wikipedia.org/wiki/Artificial_general_intelligence" title="Artificial general intelligence" target="_blank">Artificial general intelligence</a></li>
+							</ul>
+						</section>
+						<section>
+							<iframe src="https://witusj.github.io/picojs/cam/test.html" width=1200 height=700 allow="camera"></iframe>
+							<a href="https://github.com/tehnokv/picojs" target="_blank">Bron</a>
+						</section>
+					</section>
+				</div>
+			</div>
+			
+			<script src="dbi_files/reveal.js-3.3.0.1/lib/js/head.min.js"></script>
+			<script src="dbi_files/reveal.js-3.3.0.1/js/reveal.js"></script>
+			
+			<script>
+				
+				// Full list of configuration options available at:
+				// https://github.com/hakimel/reveal.js#configuration
+				Reveal.initialize({
+					// Display the page number of the current slide
+					slideNumber: true,
+					// Push each slide change to the browser history
+					history: true,
+					// Vertical centering of slides
+					center: false,
+					// Transition style
+					transition: 'default', // none/fade/slide/convex/concave/zoom
+					// Transition style for full page slide backgrounds
+					backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
+					
+					
+					
+					// Optional reveal.js plugins
+					dependencies: [
+					]
+				});
+			</script>
+			<!-- dynamically load mathjax for compatibility with self-contained -->
+			<script>
+				(function () {
+					var script = document.createElement("script");
+					script.type = "text/javascript";
+					script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+					document.getElementsByTagName("head")[0].appendChild(script);
+				})();
+			</script>
+			
+			<script>
+				(function() {
+					if (window.jQuery) {
+						Reveal.addEventListener( 'slidechanged', function(event) {  
+							window.jQuery(event.previousSlide).trigger('hidden');
+							window.jQuery(event.currentSlide).trigger('shown');
+						});
+					}
+				})();
+			</script>
+			
+			
+		</body>
+		</html>
+		
