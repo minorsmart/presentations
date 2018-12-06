@@ -64,6 +64,8 @@ Hoe lang duurt het voordat de Arena tot aan de nok is gevuld met water?
 
 <img src="image/arena1.gif">
 
+## 
+
 ## Thanks
 
 + [Andrew Ng](https://youtu.be/NKpuX_yzdYs)
